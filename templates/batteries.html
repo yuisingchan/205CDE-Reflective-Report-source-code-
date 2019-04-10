@@ -1,0 +1,638 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Highlight Products</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/filters.css')}}">
+{% endblock %}
+
+
+{% block main %}
+
+<style>
+.prod-info-column {
+    border: 1px solid #CEEFFF;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background: #fff;
+    padding: 6px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(21,180,255,0.5);
+    box-shadow: 0 1px 1px 0 rgba(21,180,255,0.5);
+}
+
+.prod-info-column .image {
+    background-color: #EBF8FE;
+    display: block;
+    min-height: 238px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #CEEFFF;
+    padding-top: 40px;
+}
+
+.prod-info-column .column {
+    border-bottom: 1px solid #dfe5e9;
+    padding-bottom: 17px;
+    padding-left: 16px;
+    padding-top: 16px;
+    position: relative;
+    background: #fff
+}
+
+.product-content .details h5 a {
+    color: #2f383d;
+    font-size: 15px;
+    line-height: 19px;
+    text-decoration: none;
+    padding-left: 0;
+    margin-left: 0
+}
+
+.prod-info-column .details h5 a span {
+    color: #9aa7af;
+    display: block;
+    font-size: 13px
+}
+
+.prod-info-column .details span.tag1 {
+    border-radius: 50%;
+    color: #fff;
+    font-size: 15px;
+    height: 50px;
+    padding: 13px 0;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 50px
+}
+
+.prod-info-column .details span.sale {
+    background-color: #21c2f8
+}
+
+.prod-info-main .details span.discount {
+    background-color: #71e134
+}
+
+.prod-info-column .details span.hot {
+    background-color: #fa9442
+}
+
+.prod-info-column .description {
+    font-size: 12.5px;
+    line-height: 20px;
+    padding: 10px 14px 16px 19px;
+    background: #fff
+}
+
+.prod-info-column .product-info {
+    padding: 11px 19px 10px 20px
+}
+
+.prod-info-column .column a.add-to-cart {
+    color: #2f383d;
+    font-size: 13px;
+    padding-left: 16px
+}
+
+.prod-info-column name.a {
+    padding: 5px 10px;
+    margin-left: 16px
+}
+
+.product-info.form .btn {
+    padding: 6px 12px;
+    margin-left: 12px;
+    margin-top: -10px
+} 
+
+.product-block .product-details p.price-container span,
+.prod-info-column .details p.price-container span,
+.shipping table tbody tr td p.price-container span,
+.shopping-items table tbody tr td p.price-container span {
+    color: #21c2f8;
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    line-height: 20px
+}
+
+
+
+.column .image span.tag2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 11px;
+    text-align: center
+}
+
+.column .image span.tag3 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 60px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 11px;
+    text-align: center
+}
+
+.column .product-image span.sale {
+    background-color: #57889c;
+}
+
+.column .image span.hot {
+    background-color: #a90329;
+}
+
+.column .image span.special {
+    background-color: #3B6764;
+}
+.shop-btn {
+    position: relative
+}
+
+.shop-btn>span {
+    background: #a90329;
+    display: inline-block;
+    font-size: 10px;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 2px 4px 3px!important;
+    text-align: center;
+    line-height: normal;
+    width: 19px;
+    top: -7px;
+    left: -7px
+}
+
+.details hr {
+    padding: 0 0 5px!important
+}
+
+.details .glyphicon {
+    color: #3276b1
+}
+
+.details .image {
+    border-right: 0px solid #fff !important
+}
+
+.details .name {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.details .name small {
+    display: block
+}
+
+.details .name a {
+    margin-left: 0
+}
+
+.details .price-container {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 300;
+    
+}
+
+.details .price-container small {
+    font-size: 12px;
+    
+}
+
+.details .fa-2x {
+    font-size: 16px!important
+}
+
+.details .fa-2x>h5 {
+    font-size: 12px;
+    margin: 0
+}
+
+.details .fa-2x+a,
+.details .fa-2x+a+a {
+    font-size: 13px
+}
+
+.details .certified {
+    margin-top: 10px
+}
+
+.details .certified ul {
+    padding-left: 0
+}
+
+.details .certified ul li:not(first-child) {
+    margin-left: -3px
+}
+
+.details .certified ul li {
+    display: inline-block;
+    background-color: #f9f9f9;
+    padding: 13px 19px
+}
+
+.details .certified ul li:first-child {
+    border-right: none
+}
+
+.details .certified ul li a {
+    text-align: left;
+    font-size: 12px;
+    color: #6d7a83;
+    line-height: 16px;
+    text-decoration: none
+}
+
+.details .certified ul li a span {
+    display: block;
+    color: #21c2f8;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center
+}
+
+.details .message-text {
+    width: calc(100% - 70px)
+}
+
+@media only screen and (min-width:1024px) {
+    .prod-info-column div[class*=col-md-4] {
+        padding-right: 0
+    }
+    .prod-info-column div[class*=col-md-8] {
+        padding: 0 13px 0 0
+    }
+    .column div[class*=col-md-5] {
+        padding-right: 0
+    }
+    .column div[class*=col-md-7] {
+        padding: 0 13px 0 0
+    }
+    .prod-info-column .product-image {
+        border-right: 1px solid #dfe5e9
+    }
+    .prod-info-column .product-info {
+        position: relative
+    }
+}
+</style>
+
+
+
+<div class="content">
+
+    <div class="col-xs-12 col-md-6">
+      <!-- First product box start here-->
+      <div class="prod-info-column.column">
+        <div class="row">
+           <div class="col-md-5 col-sm-12 col-xs-12">
+             <div class="image"> 
+               <img src="static/image/LP-E6.jpg" class="img-responsive">  
+             </div>
+           </div>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+               <table>
+                 <tr>
+                   <th>Product ID</th>
+                   <td>30180</td>
+                 </tr>  
+                 <tr>
+                   <th>Product Name: </th>
+                   <td> Sidande LP-E6 Battery</td></tr>
+                 <tr>
+                   <th>Price:</th>
+                   <td>$260</td></tr>
+               </table>   
+            <div class="description">
+              <p>For Canon EOS 5D3 / 5D4 / 6D / 5D2 /
+                                 6D2 / 70D / 80D / 60D / 7D</p>
+            </div>
+            <div class="product-info-form">
+              <div class="row">
+                <div class="col-md-12"> 
+                  <a href="{{ url_for('addTocart')}}" class="btn btn-danger">Add to cart</a>
+                <div class="col-md-12">
+                </div> 
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- end product -->
+  </div>
+
+    <div class="col-xs-12 col-md-6">
+        <!-- First product box start here-->
+        <div class="prod-info-column.column">
+          <div class="row">
+              <div class="col-md-5 col-sm-12 col-xs-12">
+                <div class="image"> 
+                  <img src="static/image/DSTE LP-E17.jpg" alt="194x228" class="img-responsive"> 
+                  <span class="tag2 hot">
+                    HOT
+                  </span> 
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-12 col-xs-12">
+                <table>
+                  <tr>
+                   <th>Product ID</th>
+                   <td>30760</td>
+                 </tr>  
+                 <tr>
+                  <th>Product Name:</th>
+                  <td>DSTE 3X LP-E17 Battery with DC163 Travel Charger </td></tr>
+                 <tr>
+                  <th>Price:</th>
+                  <td>$490</td></tr>
+                </table>
+              <div class="description">
+                <p>FOR CANON EOS 77D / 800D / 760D / 750D / M5 / M6 /M3 / 200D</p>
+              </div>
+              <div class="product-info-form">
+                <div class="row">
+                  <div class="col-md-12"> 
+                    <a href="{{ url_for('addTocart')}}" class="btn btn-danger">Add to cart</a>
+                  </div>
+                  <div class="col-md-12">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- end product -->
+  </div>
+   
+   <div class="col-xs-12 col-md-6">
+      <!-- First product box start here-->
+     <div class="prod-info-column.column">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+              <div class=image"> 
+                <img src="static/image/KINGMA LP-E17.jpg"  class="img-responsive">  
+              </div>
+            </div>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+            <div class="details">
+                <table>
+                <tr>
+                   <th>Product ID</th>
+                   <td>30920</td>
+                 </tr>  
+                <tr>
+                  <th>Product Name: </th>
+                  <td> KINGMA LP-E17 dual batteries + USB dual charger </td></tr>
+                <tr>
+                  <th>Price:</th>
+                  <td>$370</td></tr>
+                </table>
+            </div>
+            <div class="description">
+              <p>FOR CANON EOS 77D / 800D / 760D / 750D / M5 / M6 /M3 / 200D</p>
+            </div>
+            <div class="product-info-form">
+              <div class="row">
+                <div class="col-md-12"> 
+                  <a href="{{ url_for('addTocart')}}" class="btn btn-danger">Add to cart</a>
+                </div>
+                <div class="col-md-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- end product -->
+  </div>
+
+
+  <div class="col-xs-12 col-md-6">
+      <!-- First product box start here-->
+     <div class="prod-info-column.column">
+        <div class="row">
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="product-image"> 
+              <img src="static/image/KINGMA LP-E10.jpg" class="img-responsive"> 
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12 col-xs-12">
+              <table>
+                <tr>
+                   <th>Product ID</th>
+                   <td>30240</td>
+                </tr>  
+                <tr>
+                  <th>Product Name: </th>
+                  <td>KINGMA LP-E10 1020mAh 7.55Wh 7.4V BATTERY  </td></tr>
+                <tr>
+                  <th>Price:</th>
+                  <td>$140</td></tr>
+              </table>
+            <div class="description">
+              <p>For Canon EOS 1100D 1200D  1300D  1500D  3000D</p>
+            </div>
+            <div class="product-info-form">
+              <div class="row">
+                <div class="col-md-12"> 
+                  <a href="{{ url_for('addTocart')}}"class="btn btn-danger">Add to cart</a>
+                </div>
+                <div class="col-md-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    <!-- end product -->
+  </div>
+
+
+    <div class="col-xs-12 col-md-6">
+      <!-- First product box start here-->
+      <div class="prod-info-column.column">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+              <div class="product-image"> 
+                <img src="static/image/EN-EL15.jpg" class="img-responsive"> 
+              </div>
+            </div>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+              <table>
+                <tr>
+                  <th>Product ID</th>
+                  <td>30290</td>
+                </tr>  
+                <tr>
+                  <th>Product Name: </th>
+                  <td>Sidande EN-EL15 Battery </td></tr>
+                <tr>
+                  <th>Price:</th>
+                  <td>$260</td></tr>
+              </table>
+            <div class="description">
+              <p>For Nikon D600 D610 D750 D7100 D7200 D800 D810 D850</p>
+            </div>
+            <div class="product-info-form">
+              <div class="row">
+                <div class="col-md-12"> 
+                  <a href="{{ url_for('addTocart')}}" class="btn btn-danger">Add to cart</a>
+                </div>
+                <div class="col-md-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- end product -->
+  </div>
+
+   <div class="col-xs-12 col-md-6">
+      <!-- First product box start here-->
+      <div class="prod-info-column.column">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+              <div class=image"> 
+                <img src="static/image/EN-EL14.jpg" class="img-responsive"> 
+              </div>
+            </div>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+              <table>
+                <tr>
+                  <th>Product ID</th>
+                  <td>30280</td>
+                </tr>  
+                <tr>
+                  <th>Product Name: </th>
+                  <td>Sidande EN-EL14 Battery </td></tr>
+                <tr>
+                  <th>Price:</th>
+                  <td>$260</td></tr>
+              </table>
+            <div class="description">
+              <p>For Nikon D5100 D5200 D5300 D5500 D5600 D3200 D3300 D3400</p>
+            </div>
+            <div class="product-info-form">
+              <div class="row">
+                <div class="col-md-12"> 
+                  <a href="{{ url_for('addTocart')}}" class="btn btn-danger">Add to cart</a>
+                </div>
+                <div class="col-md-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- end product -->
+  </div>
+
+   <div class="col-xs-12 col-md-6">
+      <!-- First product box start here-->
+      <div class="prod-info-column.column">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+              <div class="image"> 
+                <img src="static/image/EL14 charger.jpg" class="img-responsive"> 
+                <span class="tag2 hot">
+                  HOT
+                </span> 
+              </div>
+            </div>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+            <div class="details">
+               <table>
+                 <tr>
+                   <th>Product ID</th>
+                   <td>30685</td>
+                 </tr>  
+                 <tr>
+                   <th>Product Name: </th>
+                   <td>KINGMA EN-EL14A / EN-EL14 2pcs Battery with LCD Dual Charger</td></tr>
+                 <tr>
+                   <th>Price:</th>
+                   <td>$460</td></tr>
+               </table>
+              </div>
+            <div class="description">
+            <p>For Nikon D5100 D5200 D5300 D5500 D5600 D3200 D3300 D3400</p>
+            </div>
+            <div class="product-info-form">
+              <div class="row">
+                <div class="col-md-12"> 
+                  <a href="{{ url_for('addTocart')}}" class="btn btn-danger">Add to cart</a>
+                </div>
+                <div class="col-md-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- end product -->
+  </div>
+
+    <div class="col-xs-12 col-md-6">
+      <!-- First product box start here-->
+      <div class="prod-info-column.column">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+              <div class="image"> 
+                <img src="static/image/EL15 charger.jpg" class="img-responsive"> 
+                <span class="tag2 hot">
+                  HOT
+                </span> 
+              </div>
+            </div>
+            <div class="col-md-7 col-sm-12 col-xs-12">
+               <table>
+                 <tr>
+                   <th>Product ID</th>
+                   <td>30695</td>
+                 </tr>  
+                 <tr>
+                   <th>Product Name: </th>
+                   <td>KINGMA EN-EL15A / EN-EL15 2pcs Battery with LCD Dual Charger</td></tr>
+                 <tr>
+                   <th>Price:</th>
+                   <td>$550</td></tr>
+               </table>
+            <div class="description">
+              <p>For Nikon  D7500  D7200  D7100  D750  D850  D810  D800  D500</p>
+            </div>
+            <div class="product-info-form">
+              <div class="row">
+                <div class="col-md-12"> 
+                  <a href="{{ url_for('addTocart')}}" class="btn btn-danger">Add to cart</a>
+                </div>
+                <div class="col-md-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <!-- end product -->
+  </div>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,559 @@
+.prod-info-column {
+ 
+    border: 1px solid #CEEFFF;
+ 
+    margin-bottom: 20px;
+ 
+    margin-top: 10px;
+ 
+    background: #fff;
+ 
+    padding: 6px;
+ 
+    -webkit-box-shadow: 0 1px 4px 0 rgba(21,180,255,0.5);
+ 
+    box-shadow: 0 1px 1px 0 rgba(21,180,255,0.5);
+ 
+}
+ 
+ 
+ 
+.prod-info-column .images {
+ 
+    background-color: #EBF8FE;
+ 
+    display: block;
+ 
+    min-height: 238px;
+ 
+    overflow: hidden;
+ 
+    position: relative;
+ 
+    border: 1px solid #CEEFFF;
+ 
+    padding-top: 40px;
+ 
+}
+ 
+ 
+ 
+.prod-info-column .deatils {
+ 
+    border-bottom: 1px solid #dfe5e9;
+ 
+    padding-bottom: 17px;
+ 
+    padding-left: 16px;
+ 
+    padding-top: 16px;
+ 
+    position: relative;
+ 
+    background: #fff
+ 
+}
+ 
+ 
+ 
+.product-content .deatils h5 a {
+ 
+    color: #2f383d;
+ 
+    font-size: 15px;
+ 
+    line-height: 19px;
+ 
+    text-decoration: none;
+ 
+    padding-left: 1;
+ 
+    margin-left: 0
+ 
+}
+ 
+ 
+ 
+.prod-info-column .deatils h5 a span {
+ 
+    color: #9aa7af;
+ 
+    display: block;
+ 
+    font-size: 13px
+ 
+}
+ 
+ 
+ 
+.prod-info-column .deatils span.tag1 {
+ 
+    border-radius: 50%;
+ 
+    color: #fff;
+ 
+    font-size: 15px;
+ 
+    height: 50px;
+ 
+    padding: 13px 0;
+ 
+    position: absolute;
+ 
+    right: 10px;
+ 
+    text-align: center;
+ 
+    top: 10px;
+ 
+    width: 50px
+ 
+}
+ 
+ 
+ 
+.prod-info-column .deatils span.sale {
+ 
+    background-color: #21c2f8
+ 
+}
+ 
+ 
+ 
+.prod-info-column .deatils span.discount {
+ 
+    background-color: #71e134
+ 
+}
+ 
+ 
+ 
+.prod-info-column .deatils span.hot {
+ 
+    background-color: #fa9442
+ 
+}
+ 
+ 
+ 
+.prod-info-column .description {
+ 
+    font-size: 12.5px;
+ 
+    line-height: 20px;
+ 
+    padding: 10px 14px 16px 19px;
+ 
+    background: #fff
+ 
+}
+ 
+ 
+ 
+.prod-info-column .column {
+ 
+    padding: 11px 19px 10px 20px
+ 
+}
+ 
+ 
+ 
+.prod-info-column .product-info a.add-to-cart {
+ 
+    color: #2f383d;
+ 
+    font-size: 13px;
+ 
+    padding-left: 16px
+ 
+}
+ 
+ 
+ 
+.prod-info-column name.a {
+ 
+    padding: 5px 10px;
+ 
+    margin-left: 16px
+ 
+}
+ 
+ 
+ 
+.product-info-form .btn {
+ 
+    padding: 6px 12px;
+ 
+    margin-left: 12px;
+ 
+    margin-top: -10px
+ 
+}
+ 
+ 
+ 
+
+ 
+ 
+ 
+.product-block .deatils p.price-container span,
+ 
+.prod-info-column .deatils p.price-container span,
+ 
+.shipping table tbody tr td p.price-container span,
+ 
+.shopping-items table tbody tr td p.price-container span {
+ 
+    color: #21c2f8;
+ 
+    font-family: Lato, sans-serif;
+ 
+    font-size: 24px;
+ 
+    line-height: 20px
+ 
+}
+ 
+ 
+ 
+
+ 
+ 
+ 
+.column .image span.tag2 {
+ 
+    position: absolute;
+ 
+    top: 10px;
+ 
+    right: 10px;
+ 
+    width: 36px;
+ 
+    height: 36px;
+ 
+    border-radius: 50%;
+ 
+    padding: 10px 0;
+ 
+    color: #fff;
+ 
+    font-size: 11px;
+ 
+    text-align: center
+ 
+}
+ 
+ 
+ 
+.column .image span.tag3 {
+ 
+    position: absolute;
+ 
+    top: 10px;
+ 
+    right: 20px;
+ 
+    width: 60px;
+ 
+    height: 36px;
+ 
+    border-radius: 50%;
+ 
+    padding: 10px 0;
+ 
+    color: #fff;
+ 
+    font-size: 11px;
+ 
+    text-align: center
+ 
+}
+ 
+ 
+ 
+.column .image span.sale {
+ 
+    background-color: #57889c;
+ 
+}
+ 
+ 
+ 
+.column .image span.hot {
+ 
+    background-color: #a90329;
+ 
+}
+ 
+ 
+ 
+.column .image span.special {
+ 
+    background-color: #3B6764;
+ 
+}
+ 
+.shop-btn {
+ 
+    position: relative
+ 
+}
+ 
+ 
+ 
+.shop-btn>span {
+ 
+    background: #a90329;
+ 
+    display: inline-block;
+ 
+    font-size: 12px;
+ 
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+ 
+    font-weight: 680;
+ 
+    border-radius: 50%;
+ 
+    padding: 2px 4px 3px!important;
+ 
+    text-align: center;
+ 
+    line-height: normal;
+ 
+    width: 19px;
+ 
+    top: -7px;
+ 
+    left: -7px
+ 
+}
+ 
+ 
+ 
+.deatils hr {
+ 
+    padding: 0 0 5px!important
+ 
+}
+ 
+ 
+ 
+.deatils .glyphicon {
+ 
+    color: #3276b1
+ 
+}
+ 
+ 
+ 
+.deatils .image {
+ 
+    border-right: 0px solid #fff !important
+ 
+}
+ 
+ 
+ 
+.deatils .name {
+ 
+    margin-top: 0;
+ 
+    margin-bottom: 0
+ 
+}
+ 
+ 
+ 
+.deatils .name small {
+ 
+    display: block
+ 
+}
+ 
+ 
+ 
+.deatils .name a {
+ 
+    margin-left: 0
+ 
+}
+ 
+ 
+ 
+.deatils .price-container {
+ 
+    font-size: 24px;
+ 
+    margin: 0;
+ 
+    font-weight: 300;
+ 
+ 
+ 
+}
+ 
+ 
+ 
+.deatils .price-container small {
+ 
+    font-size: 12px;
+ 
+ 
+ 
+}
+ 
+ 
+ 
+.deatils .fa-2x {
+ 
+    font-size: 16px!important
+ 
+}
+ 
+ 
+ 
+.deatils .fa-2x>h5 {
+ 
+    font-size: 12px;
+ 
+    margin: 0
+ 
+}
+ 
+ 
+ 
+.deatils .fa-2x+a,
+ 
+.deatils .fa-2x+a+a {
+ 
+    font-size: 13px
+ 
+}
+ 
+ 
+ 
+.deatils .certified {
+ 
+    margin-top: 10px
+ 
+}
+ 
+ 
+ 
+.deatils .certified ul {
+ 
+    padding-left: 0
+ 
+}
+ 
+ 
+ 
+.deatils .certified ul li:not(first-child) {
+ 
+    margin-left: -3px
+ 
+}
+ 
+ 
+ 
+.deatils .certified ul li {
+ 
+    display: inline-block;
+ 
+    background-color: #f6f8f9;
+ 
+    padding: 12px 18px
+ 
+}
+ 
+ 
+ 
+.deatils .certified ul li:first-child {
+ 
+    border-right: none
+ 
+}
+ 
+ 
+ 
+.deatils .certified ul li a {
+ 
+    text-align: left;
+ 
+    font-size: 12px;
+ 
+    color: #6d7a83;
+ 
+    line-height: 16px;
+ 
+    text-decoration: none
+ 
+}
+ 
+ 
+ 
+.deatils .certified ul li a span {
+ 
+    display: block;
+ 
+    color: #21c2f8;
+ 
+    font-size: 13px;
+ 
+    font-weight: 700;
+ 
+    text-align: center
+ 
+}
+ 
+ 
+ 
+.deatils .message-text {
+ 
+    width: calc(100% - 70px)
+ 
+}
+ 
+ 
+ 
+@media only screen and (min-width:1024px) {
+ 
+    .prod-info-column div[class*=col-md-4] {
+ 
+        padding-right: 0
+ 
+    }
+ 
+    .prod-info-column div[class*=col-md-8] {
+ 
+        padding: 0 13px 0 0
+ 
+    }
+ 
+    .colmun div[class*=col-md-5] {
+ 
+        padding-right: 0
+ 
+    }
+ 
+    .column div[class*=col-md-7] {
+ 
+        padding: 0 13px 0 0
+ 
+    }
+ 
+    .prod-info-column .image {
+ 
+        border-right: 1px solid #dfe5e9
+ 
+    }
+ 
+    .prod-info-column .product-info {
+ 
+        position: relative
+ 
+    }
+ 
+}

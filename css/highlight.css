@@ -1,0 +1,15 @@
+.content:{
+    margin-top:0px;
+    padding: 20px 0px 0px 20px;
+    background:#e1e2f3;
+}
+
+.prod-info-column:{
+    border: 1px solid #CEEFFF;
+    margin-bottom: 22px;
+    margin-top: 10px;
+    background: #fff;
+    padding: 8px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(21,180,255,0.5);
+    box-shadow: 0 1px 1px 0 rgba(21,180,255,0.5);
+}

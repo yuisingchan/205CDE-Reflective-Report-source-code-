@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Check for Orders</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/orderdetails.css')}}">
+{% endblock %}
+
+{% block main %}
+<div class="content">
+{% for row in results %}
+<table border="1">
+    <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Order Date</th>
+        <th>Arrival Date</th>
+        <th>Product Status</th>
+    </tr>
+    <tr>
+        <td><input type="text" value="{{row[0]}}"></td>
+        <td><input type="text" value="{{row[1]}}"></td>
+        <td><input type="text" value="{{row[2]}}"></td>
+        <td><input type="text" value="{{row[3]}}"></td>
+        <td><input type="text" value="{{row[4]}}"></td>
+    </tr>
+</table>
+{% endfor %}	
+</div>
+
+ <a href="{{url_for('highlight')}}"><button type="button">Back to Main Page</button></a>
+
+
+{% endblock %}

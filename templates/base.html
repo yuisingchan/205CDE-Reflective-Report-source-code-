@@ -1,0 +1,87 @@
+<html>
+<title>Homepage</title>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>  
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   {% block head %}
+   {% endblock %}
+</head>
+
+<style>
+body {
+  background-color: #e1e2f3;
+}  
+</style>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggle-icon"></span>
+  </button>
+
+   <div class="collapse navbar-collapse" id="collapsibleNavbar"> 
+   <ul class="navbar-nav">
+      <li class="nav-item">
+         <a class="nav-link" href="{{ url_for('index')}}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('logout')}}">Logout</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="{{ url_for('highlight')}}">Highlight Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('orderchecking')}}">Check for order</a>
+      </li>
+      <li class="nav-item dropdown">
+         <a class="nav link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">Product Menu</a>
+         <ul class="dropdown-menu">
+          <li class="dropdown-submenu">
+            <a class="nav link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">DSLR Cameras</a>
+            <div class="dropdown-submenu">
+              <a class="dropdown-item" href="{{ url_for('DSLRC')}}">Canon</a>
+              <a class="dropdown-item" href="{{ url_for('DSLRN')}}">Nikon</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">Lens</a>
+            <div class="dropdown-submenu">
+              <a class="dropdown-item" href="{{ url_for('nikkor')}}">Nikkor</a>
+              <a class="dropdown-item" href="{{ url_for('canon')}}">Canon</a>
+              <a class="dropdown-item" href="{{ url_for('tamron')}}">Tamron</a>
+              <a class="dropdown-item" href="{{ url_for('sigma')}}">Sigma</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">Accessories</a>
+            <div class="dropdown-submenu">
+              <a class="dropdown-item" href="{{ url_for('battery')}}">Batteries</a>
+              <a class="dropdown-item" href="{{ url_for('filter')}}">Fliters</a>
+            </div>
+          </li>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+         <a class="nav link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Menu</a>
+         <div class="dropdown-menu">
+             <a class="dropdown-item" href="{{ url_for('cart')}}">
+             shopping cart</a>
+             <a class="dropdown-item" href="{{ url_for('contactus')}}">contact</a>
+            <a class="dropdown-item" href="{{ url_for('aboutus')}}">About us</a>
+             <a class="dropdown-item" href="{{ url_for('signin')}}">Register</a>
+         </div>
+      </li>
+   </ul>
+</nav>
+{% block main %}
+{% endblock %}
+
+</body>
+</html>

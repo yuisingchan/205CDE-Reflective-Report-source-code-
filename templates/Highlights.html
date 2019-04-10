@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Highlight Products</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/highlight.css')}}">
+{% endblock %}
+
+
+{% block main %}
+
+
+
+<divc class="content">
+  <div class="row">
+    <div class="col-sm-3">
+      <h4>Highlight Products</h4>
+    </div>
+ </div>
+
+ <div class="container">
+  <div class="col-xs-12 col-md-6">
+    <!-- First product box start here-->
+    <div class="prod-info-column.column">
+      <div class="row">
+        <div class="col-md-5 col-sm-12 col-xs-12">
+          <div class="image"> 
+            <img src="static/image/D3500kit.jpg" class="img-responsive"> 
+            <span class="tag2 hot">
+              HOT
+            </span> 
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-12 col-xs-12">
+        <div class="details">
+            <h5 class="name">
+                Nikon D3500 with AF-P DX NIKKOR 18-55mm f/3.5-5.6G VR kit                         
+            </h5>
+            <p class="price-container">
+              <span>$3880</span>
+            </p>
+            <span class="tag1"></span> 
+        </div>
+        <div class="description">
+          <p>Weight (body only): 550g</p>
+          <p>Sensor's Effective Pixel: 24.20 mega pixel</p>
+          <p>Sensor Format: APS-C</p>
+          <p>screen size: 3.0 inch</p>
+          <p>Size: 124 X 97 X 69.5 mm</p>
+          <p>Storing media: SD/SDHC/SDXC </p>
+          <p>Largest image resolution: 6000 X 4000</p>
+        </div>
+        <div class="product-info-form">
+          <div class="row">
+          	<div class="col-md-12">
+          	</div>	
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end product -->
+</div>
+
+<div class="col-xs-12 col-md-6">
+  <!-- First product box start here-->
+  <div class="prod-info-column.column">
+    <div class="row">
+        <div class="col-md-5 col-sm-12 col-xs-12">
+          <div class="product-image"> 
+            <img src="static/image/EOS1500D.jpg" alt="194x228" class="img-responsive"> 
+          </div>
+        </div>
+        <div class="col-md-7 col-sm-12 col-xs-12">
+        <div class="details">
+            <h5 class="name">
+               Canon EOS 1500D with EF-S 18-55mm f/3.5-5.6 IS II Kit                        
+            </h5>
+            <p class="price-container">
+              <span>$3650</span>
+            </p>
+            <span class="tag1"></span> 
+        </div>
+        <div class="description">
+          <p>Weight (with battery): 475g</p>
+          <p>Sensor's Effective Pixel: 24.10 mega pixel</p>
+          <p>Sensor Format: APS-C</p>
+          <p>LCD screen size: 3.0 inch</p>
+          <p>Size: 129 X 101.3 X 77.6 mm</p>
+          <p>Storing media: SD/SDHC/SDXC</p>
+          <p>Largest image resolution: 6000 X 4000</p><br><br>
+          <p>Notice: Only provide authrized dealer import</p>
+        </div>
+        <div class="product-info-form">
+          <div class="row">
+            <div class="col-md-12"> 
+            </div>
+            <div class="col-md-12">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end product -->
+
+</div>
+{% endblock %}

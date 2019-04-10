@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Shopping Cart</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/cart.css')}}">
+
+{% endblock %}
+
+
+{% block main %}
+<h2>Shopping Cart</h2>
+<div class="content">
+
+
+{% for row in goods %}
+<table border="1">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Brand</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td><input type="text" value="{{row[0]}}"></td>
+        <td><input type="text" value="{{row[1]}}"></td>
+        <td><input type="text" value="{{row[2]}}"></td>
+        <td><input type="text" value="{{row[3]}}"></td>
+    </tr>
+</table>
+{% endfor %}    
+</div>
+
+<a href="{{url_for('payment')}}"><button type="button">Click to Check Out</button></a>
+
+
+{% endblock %}

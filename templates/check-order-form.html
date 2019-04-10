@@ -1,0 +1,34 @@
+<{% extends 'base.html' %}
+
+{% block head %}
+<title>Check for Orders</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/checkorder.css')}}">
+{% endblock %}
+
+{% block main %}
+<div class="content">
+  <div class="row">
+    <div class="col-sm-3">
+
+       <h3>User Login</h3>
+       <form action="/orderchecking" method="POST">
+            <div class="form-group">
+                <label for="email">Please enter uswername/ID:</label>
+                <input type="text" class="form-control" name="user">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Enter order number:</label>
+                <input type="text" class="form-control" name="orderID">
+            </div>
+            <input  class="btn btn-success" type="submit" value="submit"></button>
+        </form>
+        {% if error %}
+           <p class="error"><strong>Error:</strong> {{ error }}</p>
+        {% endif %}
+     </div>
+  </div>
+</div>
+           
+{% endblock %}
+
+

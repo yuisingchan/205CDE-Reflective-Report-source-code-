@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Register page</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}}">
+{% endblock %}
+
+{% block main %}
+<div class="content">
+  <h2>Welcome to Startrek Digital</h2>
+  <a href="{{ url_for('highlight')}}"><button type="button">Click here to start explore</button></a>
+
+{% endblock %}

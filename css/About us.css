@@ -1,0 +1,17 @@
+body {
+    background-color: pink;
+}
+
+h1 {
+	color: navy;
+	margin-left: 25px;
+}
+
+nav {
+	color: grey;
+}
+
+div {
+	margin-left:20px;
+	color: black;
+}
